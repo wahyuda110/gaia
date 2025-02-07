@@ -5,7 +5,9 @@ install_gaianet_node() {
     echo "Memulai instalasi Gaianet Node..."  
     curl -sSfL 'https://github.com/GaiaNet-AI/gaianet-node/releases/latest/download/install.sh' | bash  
     source /root/.bashrc  
-    gaianet init --config https://raw.githubusercontent.com/GaiaNet-AI/node-configs/main/qwen-1.5-0.5b-chat/config.json  
+    gaianet init --config https://raw.githubusercontent.com/GaiaNet-AI/node-configs/main/qwen-1.5-0.5b-chat/config.json
+    source /root/.bashrc 
+    cd gaianet
     gaianet config --domain gaia.domains  
     gaianet start  
     echo "Instalasi selesai!"  
