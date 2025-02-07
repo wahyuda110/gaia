@@ -23,10 +23,16 @@ while true; do
     echo " Menu Gaianet Node"  
     echo "========================="  
     echo "1. Install Gaianet Node"  
-    echo "2. Info Device dan Node ID"  
+    echo "2. Tampilkan Log Gaianet"  
     echo "3. Keluar"  
     echo "========================="  
     read -p "Pilih opsi (1-3): " choice  
+
+    # Validasi input  
+    if [[ -z "$choice" || ! "$choice" =~ ^[1-3]$ ]]; then  
+        echo "Pilihan tidak valid. Silakan coba lagi."  
+        continue  
+    fi  
 
     case $choice in  
         1)   
@@ -53,9 +59,6 @@ while true; do
             else  
                 echo "Keluar dibatalkan."  
             fi  
-            ;;  
-        *)   
-            echo "Pilihan tidak valid. Silakan coba lagi."  
             ;;  
     esac  
 done  
