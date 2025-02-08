@@ -3,6 +3,7 @@
 # Fungsi untuk menginstall Gaianet Node  
 install_gaianet_node() {  
     echo "Memulai instalasi Gaianet Node..."  
+    source /root/.bashrc 
     curl -sSfL 'https://github.com/GaiaNet-AI/gaianet-node/releases/latest/download/install.sh' | bash  
     source /root/.bashrc  
     gaianet init --config https://raw.githubusercontent.com/GaiaNet-AI/node-configs/main/qwen-1.5-0.5b-chat/config.json
