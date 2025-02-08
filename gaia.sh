@@ -8,6 +8,7 @@ install_gaianet_node() {
     gaianet init --config https://raw.githubusercontent.com/GaiaNet-AI/node-configs/main/qwen-1.5-0.5b-chat/config.json
     source /root/.bashrc 
     cd gaianet
+    source /root/.bashrc
     gaianet config --domain gaia.domains  
     gaianet start  
     echo "Instalasi selesai!"  
